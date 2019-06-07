@@ -18,15 +18,18 @@ public class BrowserStackTestBaseClass {
     	String browserStackUsername = "BROWSERSTACK_USERNAME";
     	String browserStackAccessKey = "BROWSERSTACK_ACCESSKEY";
     	
+    	// setting up BrowserStack test capabilities
     	DesiredCapabilities caps = new DesiredCapabilities();
     	caps.setCapability("os", "Windows");
     	caps.setCapability("os_version", "10");
     	caps.setCapability("browser", "Chrome");
     	caps.setCapability("browser_version", "74.0");
-    	caps.setCapability("browserstack.local", "false");
     	caps.setCapability("browserstack.selenium_version", "3.5.2");
-    	caps.setCapability("build", "something");
+    	caps.setCapability("build", "BrowserStack-[JUnit] Parallel Build");
+    	caps.setCapability("name", "BrowserStack-[JUnit] Simple Parallel Test");
+    	
 		try {
+			// creating a remote WebDriver connection
 			driver = new RemoteWebDriver(new URL("https://"+browserStackUsername+":"+browserStackAccessKey+"@hub.browserstack.com/wd/hub"), caps);
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
@@ -36,7 +39,7 @@ public class BrowserStackTestBaseClass {
     
     @After
     public void tearDown() throws Exception {
-    	System.out.println("in tear down");
+    	// send driver.quit
         driver.quit();
     }
 }
