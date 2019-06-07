@@ -11,7 +11,7 @@ public class TestClassB extends BrowserStackTestBaseClass {
     public void test_B1(){
     	System.out.println("Class B Test 1");
 		
-    	String searchString = "BrowserStack";
+    	String searchString = "Docker";
 		System.out.println("Starting to run the test for: " + searchString);
 		driver.get("https://www.google.co.in");
         WebElement element = driver.findElement(By.name("q"));
@@ -24,7 +24,7 @@ public class TestClassB extends BrowserStackTestBaseClass {
     public void test_B2(){
         System.out.println("Class B Test 2");
 		
-    	String searchString = "BrowserStack";
+    	String searchString = "GitHub";
 		System.out.println("Starting to run the test for: " + searchString);
 		driver.get("https://www.google.co.in");
         WebElement element = driver.findElement(By.name("q"));
@@ -37,7 +37,7 @@ public class TestClassB extends BrowserStackTestBaseClass {
     public void test_B3(){
         System.out.println("Class B Test 3");
 		
-    	String searchString = "BrowserStack";
+    	String searchString = "Jenkins";
 		System.out.println("Starting to run the test for: " + searchString);
 		driver.get("https://www.google.co.in");
         WebElement element = driver.findElement(By.name("q"));
@@ -50,7 +50,7 @@ public class TestClassB extends BrowserStackTestBaseClass {
     public void test_B4(){
         System.out.println("Class B Test 4");
 		
-    	String searchString = "BrowserStack";
+    	String searchString = "GitLab";
 		System.out.println("Starting to run the test for: " + searchString);
 		driver.get("https://www.google.co.in");
         WebElement element = driver.findElement(By.name("q"));
